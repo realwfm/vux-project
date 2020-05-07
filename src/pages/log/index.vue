@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    {{msg}}
+    <p v-for="(item,index) in 50" :key="index">{{item}}</p>
   </div>
 </template>
 
