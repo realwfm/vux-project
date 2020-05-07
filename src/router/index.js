@@ -5,6 +5,7 @@ import Index from '@/pages/Index/index'
 import work from '@/pages/work/index'
 import log from '@/pages/log/index'
 import my from '@/pages/my/index'
+import login from '@/pages/login/index'
 
 
 Vue.use(Router)
@@ -38,11 +39,16 @@ const router = new Router({
     {
       path: '/login',
       name: 'login',
-      component: my,
+      component: login,
       meta:{title:'登录'}
     },
   ]
 });
 
+export function resetRouter() {
+  // 清空需要权限查看的路由
+//     const newRouter = createRouter()
+//     router.matcher = newRouter.matcher // reset router
+}
 
 export default router;

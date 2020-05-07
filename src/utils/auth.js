@@ -7,8 +7,24 @@ import { cookie } from 'vux'
  * ecmsmlrnd
  * ecmsmluserid
  * ecmsmlusername
- * 
  */
-export function isLoginFromCookie (){
-    return cookie.get('ecmsmlauth') && cookie.get('ecmsmlgroupid') && cookie.get('ecmsmlrnd') && cookie.get('ecmsmluserid') && cookie.get('ecmsmlusername')
+
+// export function isLoginFromCookie (){
+//     return cookie.get('ecmsmlauth') && cookie.get('ecmsmlgroupid') && cookie.get('ecmsmlrnd') && cookie.get('ecmsmluserid') && cookie.get('ecmsmlusername')
+// }
+
+const TokenKey = 'tiku_token'
+
+export function getToken() {
+  return cookie.get(TokenKey)
 }
+
+export function setToken(token) {
+  return cookie.set(TokenKey, token)
+}
+
+export function removeToken() {
+  return cookie.remove(TokenKey)
+}
+
+

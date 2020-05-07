@@ -6,7 +6,7 @@ import Vue from 'vue'
  * ecmsmlrnd
  * ecmsmluserid
  * ecmsmlusername
- * 
+ *
  */
 
 //  export function constructor (vue) {
@@ -18,7 +18,7 @@ export function login (data) {
 }
 
 export function getInfo () {
-  return Vue.http.get('index.php', {params: { m: 'exam',c: 'memberinfo'} })
+  return Vue.http.get('index.php', {params: { m: 'exam', c: 'memberinfo'} })
 }
 
 export function logout () {
